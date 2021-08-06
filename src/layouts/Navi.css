@@ -1,17 +1,16 @@
+
 .navi-container{
+    opacity: 100%;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 30VW;
     min-width: 20rem;
-    position: absolute;
+    position: fixed;
+    z-index: 10;
 }
 .navi-container-close{
-
     height: 0;
-   
-
-
 }
 .navi-container-open{
 
@@ -19,7 +18,7 @@
     background-color: rgb(183, 204, 169)
 }
 .navi-icon{
-    margin-top: 20px;
+    margin-top: 10px;
     position: absolute;
     cursor: pointer;
 
