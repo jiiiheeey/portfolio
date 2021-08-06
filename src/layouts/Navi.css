@@ -1,0 +1,60 @@
+.navi-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30VW;
+    min-width: 20rem;
+    position: absolute;
+}
+.navi-container-close{
+
+    height: 0;
+   
+
+
+}
+.navi-container-open{
+
+    transition-duration: 1.5S;
+    background-color: rgb(183, 204, 169)
+}
+.navi-icon{
+    margin-top: 20px;
+    position: absolute;
+    cursor: pointer;
+
+}
+.navi-menu{
+    left: 10px;
+}
+.navi-close{
+    right: 30px;
+
+}
+.navi-close:hover{
+    transform: rotate(90deg);
+    transition: 0.5s;
+    transition-property: transform;
+}
+.navi-list{
+    width: 60%;
+    font-size: 1.5rem;
+    padding-top : 60px;
+    margin-left: 10%;
+    
+}
+.navi-item{
+
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-bottom: 17px;
+    cursor: pointer;
+}
+.navi-item:hover{
+    font-size: 2rem;
+    padding-bottom: 20px;
+    font-weight: 600;
+    transition-duration: 1s;
+
+}
