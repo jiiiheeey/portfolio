@@ -10,6 +10,7 @@
 
 }
 .home-header-bar{
+
     min-height: 4rem;
     font-size: 1.8REM;
     background-color: whitesmoke;
@@ -27,6 +28,7 @@
     border-radius: 0rem;
     margin-left: 0vw;
     background-color:rgb(183, 204, 169) ;
+    border: none;
 }
 .header-bar-text{
  
@@ -54,11 +56,50 @@
 }
   
 .home-body{
+    width: 100vw;
     position: absolute;
     top: 800px;
-    left: 50%;
-    right: 50%;
- 
-
-
+ }
+.home-body-introduce{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(226, 226, 226);
 }
+.home-body-ad{
+    width: 50%;
+    height: 200px;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 20px;
+    text-align: center;
+    text-justify: center;
+}
+.home-body-profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 200px;
+    background-color: whitesmoke;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.home-body-profile-img{
+    border-radius: 20%;
+    height: 150px;
+    width: auto;
+}
+.home-body-profile-text{
+    text-align: left;
+    margin-left : 20px;
+}
+.home-body-profile-text-name{
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+ .home-body-project{
+    width: 100vw;
+    height: 100%;
+ }

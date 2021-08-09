@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "title": "전자전표시스템",
+      "desc": "SK 인포섹 합병 관련 임직원 경비 데이터 처리 및 FrontEnd 개발",
+      "gubun": "사내 프로젝트",
+      "insignt": "",
+      "technology": "webDynABAP, SQL",
+      "period": "2021.06 ~ 2021.08(예정)",
+      "scr": "kakaoWork"
+    },
+
+    {
+      "title": "KakaoWork for SAP",
+      "desc": "카카오워크 봇 연결 및 FrontEnd 개발",
+      "gubun": "사내 프로젝트",
+      "insignt": "",
+      "technology": "React, Node.js, SAPUI5, ABAP",
+      "period": "2021.03 ~ 2021.06",
+      "scr": "kakaoWork"
+    },
+    {
+      "title": "To Do List",
+      "desc": "react, node.js를 이용한 할일리스트",
+      "gubun": "개인 공부",
+      "insignt": "postman",
+      "technology": "React, node.js, Firestore",
+      "period": "2021.03",
+      "scr": "kakaoWork"
+    },
+    {
+      "title": "Shopping Cart",
+      "desc": "SAPUI5를 이용한 구매전표를 생성하는 쇼핑몰홈페이지 제작",
+      "gubun": "개인 공부",
+      "insignt": "postman",
+      "technology": "SAPUI5, ABAP, oData",
+      "period": "2021.02 ~ 2021.03",
+      "scr": "kakaoWork"
+    },
+    {
+      "title": "종각김치 SAP 구축",
+      "desc": "가상의 김치회사 SAP 신규 구축",
+      "gubun": "개인 공부",
+      "insignt": "",
+      "technology": "ABAP, MES, CIROS",
+      "period": "2020.08 ~ 2020.12",
+      "scr": "kakaoWork"
+    },
+    {
+      "title": "Smart Librarian",
+      "desc": "객체 및 문자 인식을 이용한 책 태그 찾기",
+      "gubun": "졸업 프로젝트",
+      "insignt": "",
+      "technology": "Python, OpenCV, Computer Vision API 연동(Azure)",
+      "period": "2018.03 ~ 2018.12",
+      "scr": "kakaoWork"
+    }
+  ]
+}

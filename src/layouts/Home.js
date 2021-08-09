@@ -1,5 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Profiler } from "react";
+import Project from "../layouts/Project";
 import "./Home.css";
+import Myphoto from "../assets/img/profile_jihye.jpg";
+import Profile from "../assets/data/profile.json";
+import Carousel from "../layouts/Carousel";
 function Home() {
   const boxText = "안녕 안녕 개발자 손지혜입니다.";
   const [text, setText] = useState("");
@@ -12,7 +16,7 @@ function Home() {
     const interval = setInterval(() => {
       setText(text + boxText[count]);
       setCount(count + 1);
-    }, 150);
+    }, 120);
     if (count === boxText.length) {
       clearInterval(interval);
       setGoBtn(true);
@@ -32,7 +36,7 @@ function Home() {
   };
   let positionBar;
   position > 200 ? (positionBar = position) : (positionBar = 350);
-
+  const aa = () => {};
   return (
     <>
       <div className="home">
@@ -48,42 +52,28 @@ function Home() {
           )}
         </div>
         <div className="home-body">
-          <div className="home-body-ad">광고입니다</div>
-          <div className="home-body-profile">profile</div>
-          <div className="home-body-carousel">carousel</div>
-          <div className="home-body-project">project</div>
+          <div className="home-body-introduce">
+            <div className="home-body-ad">
+              광고입니다
+              <div>광고내용내용내용</div>
+            </div>
+            <div className="home-body-profile">
+              <img className="home-body-profile-img" src={Myphoto} width="200px" alt=""></img>
+              <div className="home-body-profile-text">
+                <div className="home-body-profile-text-name">{Profile.name}</div>
+                <div>좌우명 {Profile.desc}</div>
+                <div>이메일 {Profile.email}</div>
+                <div>연락처 {Profile.mobile}</div>
+              </div>
+            </div>
+          </div>
+          <div className="home-body-carousel">
+            <Carousel />
+          </div>
+          <div className="home-body-project">
+            <Project />
+          </div>
           <div className="home-body-certi">certi</div>
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div>
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>
-          <div className="home-footer">Footer</div>
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div>
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>{" "}
-          <div className="home-footer">Footer</div> <div className="home-footer">Footer</div>
           <div className="home-footer">Footer</div>
         </div>
       </div>

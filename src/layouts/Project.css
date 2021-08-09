@@ -1,0 +1,14 @@
+.project-container{
+
+}
+.project-box{
+   width: 100%;
+   padding: 1px;
+   border: 1px solid red;
+   background-color: white;
+ }
+ .project-item{
+    align-items: center;
+    justify-content: center;
+
+ }
