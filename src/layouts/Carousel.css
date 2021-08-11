@@ -13,7 +13,7 @@
    color: burlywood;
    border-radius: 10px;
    border: 1px solid burlywood;
-
+   cursor: pointer;
 }
 
 .button :hover{

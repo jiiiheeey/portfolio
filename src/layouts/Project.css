@@ -1,14 +1,72 @@
 .project-container{
+   font-family: sans-serif;
+   text-align: center;
+   transition: all 0.5s;
+   z-index: 0;
+   background-color: rgb(235, 209, 221);
+   padding-top: 30px;
+}
+
+.project-container-openmodal{
+   transition: all 0.5s;
+   background-color: rgb(0, 0, 0); /* Fallback color */
+   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+   z-index: 0;
+}
+
+.modal-close{
+ height: 0px;
+}
+
+.modal {
+   transition: all 0.5s;
+   position: fixed;
+   bottom: 0px;
+   z-index: 1000;
+   width: 96%;
+   left: 2%;
+   border-radius: 10px 10px 0px 0px;
+   background-color: white;
+   height: 300px;
+   padding : 40px 0px 10px 0px;
 
 }
-.project-box{
-   width: 100%;
-   padding: 1px;
-   border: 1px solid red;
-   background-color: white;
- }
- .project-item{
-    align-items: center;
-    justify-content: center;
+.modal-close-button {
+   position: fixed;
+   right: 5%;
+}
+.box-container {
+   height: 100vh;
+   flex-direction: row;
+   flex-wrap: wrap;
+   display: flex;
+   justify-content: center;
+   /* align-content: space-around; */
+   align-items: baseline;
+}
 
- }
+.project-box {
+   /* margin: 10px ; */
+   padding: 0px 30px;
+   width: 300px;
+   text-align: left;
+   height: 200px;
+}
+
+.box-container :hover {
+   transition: all 0.5s;
+   transform: scale3d(1.1, 1.1, 1);
+   border: solid 10px gray;
+}
+
+.project-box :hover {
+   transform: none;
+   transition: none;
+   border: none;
+   background-color: none;
+} 
+
+.project-item{
+   height: auto;
+   margin-bottom: 10px;
+}
