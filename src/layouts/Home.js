@@ -1,11 +1,11 @@
-import React, { useState, useEffect, Profiler } from "react";
+import React, { useState, useEffect, Profiler, useDebugValue } from "react";
 import Project from "../layouts/Project";
 import "./Home.css";
 import Myphoto from "../assets/img/profile_jihye.jpg";
 import Profile from "../assets/data/profile.json";
 import Carousel from "../layouts/Carousel";
 function Home() {
-  const boxText = "안녕 안녕 개발자 손지혜입니다.";
+  const boxText = "개발자 손지혜의 홈페이지";
   const [text, setText] = useState("");
   const [count, setCount] = useState(0);
   const [goBtn, setGoBtn] = useState(false);
@@ -34,9 +34,11 @@ function Home() {
     setPosition(window.scrollY);
     window.scrollY > 250 ? setTopBar(true) : setTopBar(false);
   };
+  const onClickGoButton = () => {
+    window.scrollTo({ top: 760, behavior: "smooth" });
+  };
   let positionBar;
   position > 200 ? (positionBar = position) : (positionBar = 350);
-  const aa = () => {};
   return (
     <>
       <div className="home">
@@ -45,7 +47,7 @@ function Home() {
 
           {!topBar && (
             <div className="header-bar-go-button">
-              <div className="icon">
+              <div className="icon" onClick={onClickGoButton}>
                 <i class="fas fa-angle-double-down"></i>
               </div>
             </div>

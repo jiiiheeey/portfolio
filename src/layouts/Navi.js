@@ -11,7 +11,9 @@ function Navi() {
     setNav(navOpen => !navOpen);
   };
 
-  const scorllToItem = () => {};
+  const scorllToItem = () => {
+    // window.scrollTo({ top: 760, behavior: "smooth" });
+  };
   return (
     <>
       <div className={!navOpen ? "navi-container navi-container-close" : "navi-container navi-container-open"}>

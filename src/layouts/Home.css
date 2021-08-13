@@ -3,10 +3,8 @@
     padding: 0;
     font-family: 'Nanum Gothic';
     font-size: 0.9rem;
-    width: 100%;
-    ;
-
-
+    width: 100vw;  
+    height: max-content;
 
 }
 .home-header-bar{
@@ -16,7 +14,7 @@
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
-    margin-left: 15vw;
+    margin-left: 15%;
     width: 70%;
     border-radius: 3rem;
     position: absolute;
@@ -53,21 +51,25 @@
 }
 .header-bar-go-button .icon{
     padding-left: 15px;
+    cursor: pointer;
 }
   
 .home-body{
     width: 100vw;
     position: absolute;
-    top: 800px;
+    top: 100vh;
  }
 .home-body-introduce{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(226, 226, 226);
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(83, 109, 108);
 }
 .home-body-ad{
+    min-width: 500px;
     width: 50%;
     height: 200px;
     background-color: whitesmoke;
@@ -75,22 +77,29 @@
     margin: 20px;
     text-align: center;
     text-justify: center;
+    padding: 10px;
 }
 .home-body-profile{
+    
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30%;
-    height: 190px;
-    padding: 5px;
+    min-width: 300px;
+    padding: 10px;
+    /* min-width: 500px; */
+    height: 200px;
     background-color: whitesmoke;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
+
+
 .home-body-profile-img{
     /* margin: 3% 1% 3% 5%; */
     border-radius: 20%;
     height: 150px;
     width: auto;
+    margin-left: 15px;
 }
 .home-body-profile-text{
     text-align: left;
@@ -102,6 +111,45 @@
     margin-bottom: 20px;
   }
  .home-body-project{
-    width: 100vw;
-    height: 100vh;
+ 
  }
+
+ @media screen and (max-width : 850px){
+    .home-body-profile{
+        width: 80%;
+        margin :10px;
+        min-width: 250px;
+    }
+
+    .home-body-ad{
+        width: 80%;
+        margin :10px;
+        min-width: 250px;
+       
+    }
+    .home-header-bar{
+        font-size: 1.3REM;
+        margin-left: 10%;
+        width: 80%;    
+      }
+    .home-header-bar-top{
+        width: 100vw;
+        border-radius: 0rem;
+        margin-left: 0vw;
+
+    }
+    .header-bar-text{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.6rem; 
+     }
+     .header-bar-go-button .icon{
+        padding-left: 1%;
+    }
+    .home-body-profile-text{
+        text-align: left;
+        margin : 20px 10px 20px 20px;
+    }
+}

@@ -3,19 +3,26 @@
    text-align: center;
    transition: all 0.5s;
    z-index: 0;
-   background-color: rgb(235, 209, 221);
    padding-top: 30px;
+   cursor: pointer;
+   height: max-content;
 }
 
 .project-container-openmodal{
+   /* height: max-content; */
    transition: all 0.5s;
    background-color: rgb(0, 0, 0); /* Fallback color */
    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
    z-index: 0;
+   cursor: default;
+   transform: none;
+   transition: none;
+   
 }
 
 .modal-close{
  height: 0px;
+ 
 }
 
 .modal {
@@ -29,12 +36,13 @@
    background-color: white;
    height: 300px;
    padding : 40px 0px 10px 0px;
-
+   cursor: default;
 }
 .modal-close-button {
    position: fixed;
+   cursor: pointer;
    right: 5%;
-}
+   }
 .box-container {
    height: 100vh;
    flex-direction: row;
@@ -47,7 +55,8 @@
 
 .project-box {
    /* margin: 10px ; */
-   padding: 0px 30px;
+   padding: 0px 10px;
+   margin: 0px 30px;
    width: 300px;
    text-align: left;
    height: 200px;
@@ -69,4 +78,16 @@
 .project-item{
    height: auto;
    margin-bottom: 10px;
+}
+
+@media screen and (max-width : 850px){
+   .project-box {
+      /* margin: 10px ; */
+      padding: 0px 10px;
+      margin: 0px 30px;
+      width: 70%;
+      text-align: left;
+      height: 200px;
+   }
+   
 }
