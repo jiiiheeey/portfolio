@@ -9,8 +9,9 @@ function Home() {
   const [text, setText] = useState("");
   const [count, setCount] = useState(0);
   const [goBtn, setGoBtn] = useState(false);
-  const [position, setPosition] = useState(0);
+  const [position, setPosition] = useState({ currentY: 0, headerBarY: 0, headerBarHeight: 0 });
   const [topBar, setTopBar] = useState(false);
+
   useEffect(() => {
     //   typing 효과
     const interval = setInterval(() => {
@@ -29,20 +30,26 @@ function Home() {
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
+
   const onScroll = () => {
-    console.log(window.scrollY);
     setPosition(window.scrollY);
-    window.scrollY > 250 ? setTopBar(true) : setTopBar(false);
+    let headerBarHeight = document.getElementById("header-bar").getBoundingClientRect().height;
+    let headerBarYPoint = headerBarHeight + document.getElementById("header-bar").getBoundingClientRect().top;
+
+    window.scrollY > headerBarYPoint ? setTopBar(true) : setTopBar(false);
   };
+
   const onClickGoButton = () => {
-    window.scrollTo({ top: 760, behavior: "smooth" });
+    let headerBarHeight = document.getElementById("header-bar").getBoundingClientRect().height;
+    let bodyYPoint = -headerBarHeight + document.getElementById("body").getBoundingClientRect().top;
+    window.scrollTo({ top: bodyYPoint, left: 0, behavior: "smooth" });
   };
   let positionBar;
-  position > 200 ? (positionBar = position) : (positionBar = 350);
+  position > "50vh" ? (positionBar = position) : (positionBar = 300);
   return (
     <>
       <div className="home">
-        <div className={topBar ? "home-header-bar home-header-bar-top" : "home-header-bar"} style={{ marginTop: positionBar }}>
+        <div className={topBar ? "home-header-bar home-header-bar-top" : "home-header-bar"} id="header-bar" style={{ marginTop: positionBar }}>
           <div className="header-bar-text">{text}</div>
 
           {!topBar && (
@@ -53,7 +60,7 @@ function Home() {
             </div>
           )}
         </div>
-        <div className="home-body">
+        <div className="home-body" id="body">
           <div className="home-body-introduce">
             <div className="home-body-ad">
               광고입니다
