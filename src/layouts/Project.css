@@ -17,7 +17,7 @@
    cursor: default;
    transform: none;
    transition: none;
-   
+
 }
 
 .modal-close{
@@ -34,7 +34,7 @@
    left: 2%;
    border-radius: 10px 10px 0px 0px;
    background-color: white;
-   height: 300px;
+   height: 50%;
    padding : 40px 0px 10px 0px;
    cursor: default;
 }
@@ -42,6 +42,7 @@
    position: fixed;
    cursor: pointer;
    right: 5%;
+
    }
 .box-container {
    height: 100vh;

@@ -16,6 +16,7 @@
     justify-content: center;
     margin-left: 15%;
     width: 70%;
+    top : 40%;
     border-radius: 3rem;
     position: absolute;
     z-index: 1;
@@ -27,6 +28,14 @@
     margin-left: 0vw;
     background-color:rgb(183, 204, 169) ;
     border: none;
+    position : fixed;
+    top : 0px;
+    z-index: 2;
+    min-height: 4rem;
+    font-size: 1.8REM;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 .header-bar-text{
  
@@ -53,7 +62,15 @@
     padding-left: 15px;
     cursor: pointer;
 }
-  
+@keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+  }
+.click-icon { 
+    font-size: 1.5rem;
+    animation: blink-effect .9s step-end infinite;
+}
 .home-body{
     width: 100vw;
     position: absolute;
@@ -120,6 +137,9 @@
         margin :10px;
         min-width: 250px;
     }
+    .click-icon { 
+        font-size: 0.9rem;
+    }
 
     .home-body-ad{
         width: 80%;
@@ -136,7 +156,12 @@
         width: 100vw;
         border-radius: 0rem;
         margin-left: 0vw;
-
+        padding: 0 1.6rem; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        
     }
     .header-bar-text{
         width: 80%;
